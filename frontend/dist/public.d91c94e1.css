@@ -1,0 +1,193 @@
+:root {
+  --white: #fff;
+  --blue: #36f;
+  --gray: #f2f2f2;
+  --black: #000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--gray);
+  color: #333;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+  padding: 1rem;
+}
+
+header, footer {
+  background: var(--white);
+  padding: 1rem;
+  box-shadow: 0 1px 4px #0000001a;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.topbar {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.navbar {
+  background: var(--white);
+  justify-content: center;
+  gap: 1.5rem;
+  padding: .5rem;
+  display: flex;
+  box-shadow: 0 1px 4px #0000001a;
+}
+
+.navbar a {
+  color: var(--blue);
+  padding-bottom: .25rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar a.active {
+  color: var(--black);
+  border-bottom: 2px solid var(--blue);
+}
+
+.city-tabs {
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  display: flex;
+}
+
+.city-tabs button {
+  cursor: pointer;
+  color: var(--black);
+  background: none;
+  border: none;
+  border-bottom: 2px solid #0000;
+  padding: .5rem 1rem;
+  font-weight: 500;
+}
+
+.city-tabs button.active {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.upload-form {
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+}
+
+.upload-form input[type="file"] {
+  display: none;
+}
+
+.upload-form label.upload-file-btn {
+  background: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 4px;
+  padding: .5rem 1rem;
+  font-weight: 500;
+  transition: background .2s;
+}
+
+.upload-form label.upload-file-btn:hover {
+  background: #254eda;
+}
+
+.upload-form input.upload-caption {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  padding: .5rem;
+}
+
+.upload-form button.upload-submit {
+  background: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: .5rem 1rem;
+  font-weight: 500;
+  transition: background .2s;
+}
+
+.upload-form button.upload-submit:hover {
+  background: #254eda;
+}
+
+.guide-grid {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  display: grid;
+}
+
+.guide-card {
+  background: var(--white);
+  border-radius: 8px;
+  flex-direction: column;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 1px 4px #0000001a;
+}
+
+.guide-card img {
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+}
+
+.guide-card .info {
+  flex: 1;
+  padding: 1rem;
+}
+
+.guide-card h3 {
+  margin-bottom: .5rem;
+  font-size: 1.1rem;
+}
+
+.guide-card p {
+  font-size: .9rem;
+  line-height: 1.3;
+}
+
+.tabs {
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  display: flex;
+}
+
+.tabs button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #0000;
+  padding: .5rem 1rem;
+  font-weight: 500;
+  transition: color .2s, border-color .2s;
+}
+
+.tabs button.active {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+/*# sourceMappingURL=public.d91c94e1.css.map */

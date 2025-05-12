@@ -1,0 +1,201 @@
+:root {
+    --white: #ffffff;
+    --blue: #3366ff;
+    --gray: #f2f2f2;
+    --black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: var(--gray);
+    color: #333;
+}
+
+.container {
+    max-width: 1024px;
+    margin: auto;
+    padding: 1rem;
+}
+
+header,
+footer {
+    background: var(--white);
+    padding: 1rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+/* Topbar */
+.topbar {
+    background: var(--black);
+    color: var(--white);
+    padding: 1rem;
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Navbar abaixo da topbar */
+.navbar {
+    background: var(--white);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: var(--blue);
+    font-weight: 500;
+    text-decoration: none;
+    padding-bottom: 0.25rem;
+}
+
+.navbar a.active {
+    color: var(--black);
+    border-bottom: 2px solid var(--blue);
+}
+
+/* Abas de cidade no calendário */
+.city-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.city-tabs button {
+    background: transparent;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--black);
+    border-bottom: 2px solid transparent;
+}
+
+.city-tabs button.active {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+/* upload form */
+.upload-form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.upload-form input[type="file"] {
+    /* esconde o “choose file” nativo e estiliza o botão */
+    display: none;
+}
+
+.upload-form label.upload-file-btn {
+    background: var(--blue);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background .2s;
+}
+
+.upload-form label.upload-file-btn:hover {
+    background: #254eda;
+    /* tom ligeiramente mais escuro */
+}
+
+.upload-form input.upload-caption {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.upload-form button.upload-submit {
+    background: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background .2s;
+}
+
+.upload-form button.upload-submit:hover {
+    background: #254eda;
+}
+
+/* Card de guia */
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.guide-card {
+    background: var(--white);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.guide-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.guide-card .info {
+    padding: 1rem;
+    flex: 1;
+}
+
+.guide-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.guide-card p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+/* Tabs de cidade */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.tabs button {
+    background: transparent;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: color .2s, border-color .2s;
+}
+
+.tabs button.active {
+    color: var(--blue);
+    border-color: var(--blue);
+}
