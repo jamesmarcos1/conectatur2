@@ -1,6 +1,6 @@
 # backend/app/models.py
 
-from sqlalchemy import Column, Integer, String, Text, DateTime, Float
+from sqlalchemy import Column, Integer, String, Text, DateTime, Float, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
@@ -37,3 +37,11 @@ class GalleryItem(Base):
     id       = Column(Integer, primary_key=True, index=True)
     url      = Column(String)
     caption  = Column(String, nullable=True)
+    owner_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    
+class User(Base):
+    __tablename__ = "users"
+    id       = Column(Integer, primary_key=True, index=True)
+    username = Column(String, unique=True, index=True)
+    hashed_password = Column(String)
+    role     = Column(String, default="user")  # user ou admin

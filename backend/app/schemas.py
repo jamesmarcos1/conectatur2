@@ -14,7 +14,6 @@ class Event(EventCreate):
     class Config:
         from_attributes = True  
 
-# ------------------------------
 class GuideCreate(BaseModel):
     name: str
     description: str
@@ -44,5 +43,21 @@ class GalleryItemCreate(BaseModel):
 
 class GalleryItem(GalleryItemCreate):
     id: int
+    owner_id: int    # expõe o dono do item
     class Config:
-        from_attributes = True  
+        from_attributes = True 
+        
+class UserCreate(BaseModel):
+    username: str
+    password: str
+
+class User(BaseModel):
+    id: int
+    username: str
+    role: str
+    class Config:
+        from_attributes = True
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str

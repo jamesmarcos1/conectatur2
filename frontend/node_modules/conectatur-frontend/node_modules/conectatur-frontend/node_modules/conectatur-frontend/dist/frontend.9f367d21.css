@@ -1,0 +1,371 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.login-page {
+  background: #000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+}
+
+.login-box {
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+  width: 320px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px #0000004d;
+}
+
+.login-box h2 {
+  color: #000;
+  margin-bottom: .5rem;
+  font-size: 1.8rem;
+}
+
+.login-box p {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.login-box input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  margin: .5rem 0;
+  padding: .75rem;
+  font-size: 1rem;
+}
+
+.login-box button {
+  color: #fff;
+  cursor: pointer;
+  background: #000;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 1rem;
+  padding: .75rem;
+  font-size: 1rem;
+}
+
+.login-box button:hover {
+  background: #333;
+}
+
+.login-box .error {
+  color: #c00;
+  margin-top: 1rem;
+  font-size: .9rem;
+}
+
+:root {
+  --white: #fff;
+  --blue: #36f;
+  --blue-dark: #254eda;
+  --gray: #f2f2f2;
+  --overlay: #00000080;
+}
+
+.city-tabs {
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.city-tabs button {
+  color: #333;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #0000;
+  padding: .5rem 1rem;
+  font-weight: 500;
+  transition: color .2s, border-color .2s;
+}
+
+.city-tabs button.active {
+  color: var(--blue-dark);
+  border-color: var(--blue-dark);
+}
+
+.btn-create-event {
+  background: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  margin-left: auto;
+  padding: .5rem 1rem;
+  font-weight: 600;
+  transition: background .2s;
+}
+
+.btn-create-event:hover {
+  background: var(--blue-dark);
+}
+
+.fc .fc-event {
+  background-color: var(--blue) !important;
+  color: var(--white) !important;
+  border: none !important;
+  border-radius: 4px !important;
+}
+
+.modal-overlay {
+  background: var(--overlay);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modal {
+  background: var(--white);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px #0003;
+}
+
+.modal h3 {
+  color: #222;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.modal form input, .modal form select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  margin: .25rem 0 1rem;
+  padding: .5rem;
+}
+
+.modal button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: .5rem 1rem;
+  font-weight: 600;
+  transition: background .2s;
+}
+
+.modal button[type="submit"] {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.modal button[type="submit"]:hover {
+  background: var(--blue-dark);
+}
+
+.modal button[type="button"] {
+  background: #eee;
+  margin-left: .5rem;
+}
+
+:root {
+  --white: #fff;
+  --blue: #36f;
+  --gray: #f2f2f2;
+  --black: #000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--gray);
+  color: #333;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+  padding: 1rem;
+}
+
+header, footer {
+  background: var(--white);
+  padding: 1rem;
+  box-shadow: 0 1px 4px #0000001a;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.topbar {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.navbar {
+  background: var(--white);
+  justify-content: center;
+  gap: 1.5rem;
+  padding: .5rem;
+  display: flex;
+  box-shadow: 0 1px 4px #0000001a;
+}
+
+.navbar a {
+  color: var(--blue);
+  padding-bottom: .25rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar a.active {
+  color: var(--black);
+  border-bottom: 2px solid var(--blue);
+}
+
+.city-tabs {
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  display: flex;
+}
+
+.city-tabs button {
+  cursor: pointer;
+  color: var(--black);
+  background: none;
+  border: none;
+  border-bottom: 2px solid #0000;
+  padding: .5rem 1rem;
+  font-weight: 500;
+}
+
+.city-tabs button.active {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.upload-form {
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+}
+
+.upload-form input[type="file"] {
+  display: none;
+}
+
+.upload-form label.upload-file-btn {
+  background: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 4px;
+  padding: .5rem 1rem;
+  font-weight: 500;
+  transition: background .2s;
+}
+
+.upload-form label.upload-file-btn:hover {
+  background: #254eda;
+}
+
+.upload-form input.upload-caption {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  padding: .5rem;
+}
+
+.upload-form button.upload-submit {
+  background: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: .5rem 1rem;
+  font-weight: 500;
+  transition: background .2s;
+}
+
+.upload-form button.upload-submit:hover {
+  background: #254eda;
+}
+
+.guide-grid {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  display: grid;
+}
+
+.guide-card {
+  background: var(--white);
+  border-radius: 8px;
+  flex-direction: column;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 1px 4px #0000001a;
+}
+
+.guide-card img {
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+}
+
+.guide-card .info {
+  flex: 1;
+  padding: 1rem;
+}
+
+.guide-card h3 {
+  margin-bottom: .5rem;
+  font-size: 1.1rem;
+}
+
+.guide-card p {
+  font-size: .9rem;
+  line-height: 1.3;
+}
+
+.tabs {
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  display: flex;
+}
+
+.tabs button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #0000;
+  padding: .5rem 1rem;
+  font-weight: 500;
+  transition: color .2s, border-color .2s;
+}
+
+.tabs button.active {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+/*# sourceMappingURL=frontend.9f367d21.css.map */

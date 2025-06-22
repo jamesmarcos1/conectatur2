@@ -1,14 +1,32 @@
 // src/App.js
-import React from 'react'
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
-import CalendarView from './components/CalendarView'
-import GuideList from './components/GuideList'
-import LodgingList from './components/LodgingList'
-import Gallery from './components/Gallery'
+import React, { useContext } from 'react';
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+    NavLink,
+    useLocation,
+    Navigate
+} from 'react-router-dom';
 
-export default function App() {
+import { AuthContext } from './AuthContext';
+import Login from './components/Login';
+import CalendarView from './components/CalendarView';
+import GuideList from './components/GuideList';
+import LodgingList from './components/LodgingList';
+import Gallery from './components/Gallery';
+
+function AppRoutes() {
+    const { user } = useContext(AuthContext);
+    const location = useLocation();
+
+    // se não estiver logado e não for /login, redireciona pra login
+    if (!user && location.pathname !== '/login') {
+        return <Navigate to="/login" replace />;
+    }
+
     return (
-        <BrowserRouter>
+        <>
             {/* Topbar */}
             <div className="topbar">ConectaTur</div>
 
@@ -18,6 +36,7 @@ export default function App() {
                 <NavLink to="/guides" className={({ isActive }) => isActive ? 'active' : ''}>Guias</NavLink>
                 <NavLink to="/lodging" className={({ isActive }) => isActive ? 'active' : ''}>Hospedagem</NavLink>
                 <NavLink to="/gallery" className={({ isActive }) => isActive ? 'active' : ''}>Galeria</NavLink>
+                <NavLink to="/login" className={({ isActive }) => isActive ? 'active' : ''}>Login</NavLink>
             </nav>
 
             <main className="container">
@@ -26,12 +45,21 @@ export default function App() {
                     <Route path="/guides" element={<GuideList />} />
                     <Route path="/lodging" element={<LodgingList />} />
                     <Route path="/gallery" element={<Gallery />} />
+                    <Route path="/login" element={<Login />} />
                 </Routes>
             </main>
 
             <footer className="container" style={{ textAlign: 'center', padding: '1rem 0' }}>
                 © Secretaria de Turismo
             </footer>
+        </>
+    );
+}
+
+export default function App() {
+    return (
+        <BrowserRouter>
+            <AppRoutes />
         </BrowserRouter>
-    )
+    );
 }

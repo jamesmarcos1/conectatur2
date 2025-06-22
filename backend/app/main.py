@@ -32,9 +32,11 @@ from app.routers.events   import router as events_router
 from app.routers.guides   import router as guides_router
 from app.routers.lodging  import router as lodging_router
 from app.routers.gallery  import router as gallery_router
+from app.routers.auth     import router as auth_router
 
 # ──────── INCLUSÃO DOS ROUTERS ────────
 app.include_router(events_router)
 app.include_router(guides_router)
 app.include_router(lodging_router)
 app.include_router(gallery_router)
+app.include_router(auth_router)
